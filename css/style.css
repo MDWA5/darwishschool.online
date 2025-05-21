@@ -932,63 +932,94 @@ nav ul li a.active::after {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
-    gap: 20px;
-    padding: 20px 0;
+    gap: 25px;
+    padding: 25px 0;
     direction: rtl;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: var(--gold) transparent;
 }
 
 .testimonial-item {
     background-color: var(--uae-white);
-    border-radius: 8px;
-    box-shadow: var(--shadow-md);
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
     overflow: hidden;
     position: relative;
     flex: 0 0 350px;
     min-width: 350px;
-    transition: transform 0.3s ease;
+    transition: all 0.4s ease;
+    border: 1px solid rgba(183, 135, 11, 0.1);
 }
 
 .testimonial-item:hover {
-    transform: translateY(-10px);
+    transform: translateY(-12px);
+    box-shadow: 0 15px 30px rgba(183, 135, 11, 0.2);
+    border-color: rgba(183, 135, 11, 0.3);
 }
 
 .testimonial-content {
-    padding: 50px 40px;
+    padding: 40px 30px;
     text-align: center;
     position: relative;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 1));
 }
 
 .testimonial-quote {
     position: absolute;
-    top: 20px;
-    right: 20px;
-    color: var(--gold-light);
-    font-size: 50px;
-    opacity: 0.5;
+    top: 15px;
+    right: 15px;
+    color: var(--gold);
+    font-size: 40px;
+    opacity: 0.3;
+    transition: opacity 0.3s ease;
+}
+
+.testimonial-item:hover .testimonial-quote {
+    opacity: 0.6;
 }
 
 .testimonial-content p {
-    font-size: 18px;
+    font-size: 17px;
     line-height: 1.8;
-    color: var(--text-color);
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     font-style: italic;
+    color: var(--uae-dark);
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.testimonial-content p::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    right: 25%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--gold-light), transparent);
 }
 
 .testimonial-author {
-    margin-top: 30px;
+    margin-top: 20px;
+    padding-top: 5px;
+    position: relative;
 }
 
 .author-name {
     font-weight: 700;
-    font-size: 18px;
-    color: var(--text-color);
+    font-size: 19px;
+    color: var(--gold);
     margin-bottom: 5px;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.1);
 }
 
 .author-role {
-    color: var(--gold);
     font-size: 14px;
+    color: var(--uae-gray);
+    background-color: rgba(183, 135, 11, 0.05);
+    padding: 4px 12px;
+    border-radius: 20px;
+    display: inline-block;
 }
 
 /* ===== UAE Vision Section ===== */
