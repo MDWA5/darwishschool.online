@@ -1,2 +1,0 @@
-# darwishschool.online
-darwishschool
